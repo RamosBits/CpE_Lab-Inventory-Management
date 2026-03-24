@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cpe_lab_inventory.StudentsController">
+    <top>
+        <HBox prefHeight="60.0" prefWidth="200.0" spacing="15.0" style="-fx-background-color: #c41c3b; -fx-padding: 10;" BorderPane.alignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#handleBackToMenu" style="-fx-padding: 8 15; -fx-font-size: 12; -fx-background-color: white; -fx-text-fill: #c41c3b; -fx-font-weight: bold;" text="← Back to Menu" />
+            <Label fx:id="userLabel" prefHeight="40.0" prefWidth="1000.0" text="Students" textFill="white" alignment="CENTER_LEFT">
+                <Font name="System Bold" size="24.0" />
+            </Label>
+            <Button mnemonicParsing="false" onAction="#handleLogout" style="-fx-padding: 8 15; -fx-font-size: 12; -fx-background-color: white; -fx-text-fill: #c41c3b; -fx-font-weight: bold;" text="Logout" />
+        </HBox>
+    </top>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" style="-fx-padding: 15;" BorderPane.alignment="CENTER">
+            <Label text="Manage Students" textFill="#333333">
+                <Font name="System Bold" size="16.0" />
+            </Label>
+            <VBox spacing="8.0" style="-fx-border-color: #e0e0e0; -fx-border-width: 1; -fx-padding: 10;">
+                <Label text="Add New Student" textFill="#666666">
+                    <Font name="System Bold" size="12.0" />
+                </Label>
+                <HBox spacing="10.0">
+                    <TextField fx:id="studentIdField" prefWidth="100.0" promptText="Student ID" />
+                    <TextField fx:id="studentNameField" prefWidth="150.0" promptText="Full Name" />
+                    <TextField fx:id="studentCourseField" prefWidth="120.0" promptText="Course" />
+                    <TextField fx:id="studentYearField" prefWidth="70.0" promptText="Year" />
+                    <TextField fx:id="studentContactField" prefWidth="120.0" promptText="Contact #" />
+                    <Button mnemonicParsing="false" onAction="#handleAddStudent" style="-fx-padding: 8 15; -fx-background-color: #c41c3b; -fx-text-fill: white;" text="+ Add Student" />
+                </HBox>
+            </VBox>
+            <Label text="Registered Students" textFill="#333333">
+                <Font name="System Bold" size="16.0" />
+            </Label>
+            <TableView fx:id="studentsTable" prefHeight="550.0">
+                <columns>
+                    <TableColumn fx:id="studentIdColumn" minWidth="100.0" prefWidth="100.0" text="Student ID" />
+                    <TableColumn fx:id="studentNameColumn" minWidth="120.0" prefWidth="120.0" text="Name" />
+                    <TableColumn fx:id="studentCourseColumn" minWidth="120.0" prefWidth="120.0" text="Course" />
+                    <TableColumn fx:id="studentYearColumn" minWidth="60.0" prefWidth="60.0" text="Year" />
+                    <TableColumn fx:id="studentContactColumn" minWidth="120.0" prefWidth="120.0" text="Contact" />
+                    <TableColumn fx:id="registeredDateColumn" minWidth="180.0" prefWidth="180.0" text="Registered Date" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

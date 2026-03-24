@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cpe_lab_inventory.EditItemDialogController">
+    <top>
+        <HBox prefHeight="50.0" prefWidth="200.0" spacing="15.0" style="-fx-background-color: #c41c3b; -fx-padding: 10;" BorderPane.alignment="CENTER">
+            <Label fx:id="titleLabel" prefHeight="32.0" prefWidth="450.0" text="Edit Item" textFill="white" alignment="CENTER_LEFT">
+                <Font name="System Bold" size="18.0" />
+            </Label>
+        </HBox>
+    </top>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" spacing="12.0" style="-fx-padding: 20;" BorderPane.alignment="CENTER">
+            <HBox spacing="10.0">
+                <Label prefWidth="120.0" text="Item Name:" textFill="#333333">
+                    <Font name="System Bold" size="12.0" />
+                </Label>
+                <TextField fx:id="itemNameField" prefWidth="300.0" />
+            </HBox>
+            <HBox spacing="10.0">
+                <Label prefWidth="120.0" text="Type:" textFill="#333333">
+                    <Font name="System Bold" size="12.0" />
+                </Label>
+                <ComboBox fx:id="itemTypeCombo" prefWidth="300.0" />
+            </HBox>
+            <HBox spacing="10.0">
+                <Label prefWidth="120.0" text="Total Stock:" textFill="#333333">
+                    <Font name="System Bold" size="12.0" />
+                </Label>
+                <TextField fx:id="totalStockField" prefWidth="300.0" promptText="Total stock quantity" />
+            </HBox>
+            <HBox spacing="10.0">
+                <Label prefWidth="120.0" text="Current Stock:" textFill="#333333">
+                    <Font name="System Bold" size="12.0" />
+                </Label>
+                <TextField fx:id="currentStockField" prefWidth="300.0" promptText="Available quantity" />
+            </HBox>
+        </VBox>
+    </center>
+    <bottom>
+        <HBox prefHeight="50.0" prefWidth="500.0" spacing="10.0" style="-fx-padding: 15; -fx-alignment: CENTER_RIGHT;">
+            <Button mnemonicParsing="false" onAction="#handleCancel" style="-fx-padding: 8 20; -fx-background-color: #666666; -fx-text-fill: white;" text="Cancel" />
+            <Button mnemonicParsing="false" onAction="#handleSave" style="-fx-padding: 8 20; -fx-background-color: #c41c3b; -fx-text-fill: white;" text="Save Changes" />
+        </HBox>
+    </bottom>
+</BorderPane>
